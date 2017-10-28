@@ -343,6 +343,7 @@ add_shortcode('section-slider', 'section_slider');
 add_shortcode('content-block', 'custom_content_block');
 add_shortcode('slider-block', 'custom_slider_block');
 add_shortcode('slider-picker', 'custom_slider_picker_block');
+add_shortcode('custom-gallery', 'gallery');
 
 /*------------------------------------*\
 	Custom Post Types
@@ -373,12 +374,35 @@ function section_meta($atts, $content = null) {
                 <div class="content-block-content"><?php echo $content; ?></div>
             </div>
         <?php endif; ?>
+        <div style="clear:both;"></div>
     </div>
     <?php
     return ob_get_clean();
 }
 function section_slider($atts, $content = null) {
-    return '<div>' . do_shortcode($content) . '</div>';   
+    ob_start();
+    ?>
+    <div class="section slider">
+        <div class="content-block">
+            <!-- <div id="slider"></div> -->
+            <div class="slider-box">
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
+<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
+</div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
 }
 function custom_content_block($atts, $content = null) {
     $a = shortcode_atts( array( 
@@ -422,5 +446,25 @@ function custom_slider_picker_block($atts, $content = null) {
     </div>
     <?php
     return ob_get_clean();
+}
+function gallery($atts, $content = null) {
+    $a = shortcode_atts( array(
+        'sources' => ''
+    ), $atts);
+    $output = '';
+    if (!$a['sources'])
+        return $output;
+    $no_whitespaces = preg_replace( '/\s*,\s*/', ',', filter_var( $a['sources'], FILTER_SANITIZE_STRING ) ); 
+    $sources_array = explode( ',', $no_whitespaces );
+    $output .= '<div class="section gallery">';
+        foreach ($sources_array as $i => $v) {
+            $output .= '<div>' . $v . '</div>';
+        }
+    $output .= '</div>';
+    return $output;
+    ?>
+    
+    <?php
+    // return ob_get_clean();
 }
 ?>
