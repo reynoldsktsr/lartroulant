@@ -339,11 +339,8 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Shortcodes
 add_shortcode('section-content', 'section_content');
 add_shortcode('section-meta', 'section_meta');
-add_shortcode('section-slider', 'section_slider');
 add_shortcode('content-block', 'custom_content_block');
-add_shortcode('slider-block', 'custom_slider_block');
-add_shortcode('slider-picker', 'custom_slider_picker_block');
-add_shortcode('custom-gallery', 'gallery');
+add_shortcode('custom-slider', 'slider');
 
 /*------------------------------------*\
 	Custom Post Types
@@ -379,31 +376,6 @@ function section_meta($atts, $content = null) {
     <?php
     return ob_get_clean();
 }
-function section_slider($atts, $content = null) {
-    ob_start();
-    ?>
-    <div class="section slider">
-        <div class="content-block">
-            <!-- <div id="slider"></div> -->
-            <div class="slider-box">
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/ad089cbfb5127d36bd34fbf61dc118cf.jpeg" /></div>
-<div class="image"><img title="Img 1" src="http://localhost:8888/wp-content/uploads/2017/10/e2e9604d8a43ee7630badea5478de96e.jpeg" /></div>
-</div>
-        </div>
-    </div>
-    <?php
-    return ob_get_clean();
-}
 function custom_content_block($atts, $content = null) {
     $a = shortcode_atts( array( 
         'title' => '',
@@ -423,31 +395,7 @@ function custom_content_block($atts, $content = null) {
     <?php
     return ob_get_clean();
 }
-function custom_slider_block($atts, $content = null) {
-    $a = shortcode_atts( array( 
-        'title' => 'Content Block Title!'
-    ), $atts );
-    // return '<div class="content-block">' . $content . '</div>';
-    ob_start();
-    ?>
-    <div class="content-block">
-    </div>
-    <?php
-    return ob_get_clean();
-}
-function custom_slider_picker_block($atts, $content = null) {
-    $a = shortcode_atts( array( 
-        'title' => 'Content Block Title!'
-    ), $atts );
-    // return '<div class="content-block">' . $content . '</div>';
-    ob_start();
-    ?>
-    <div class="content-block">
-    </div>
-    <?php
-    return ob_get_clean();
-}
-function gallery($atts, $content = null) {
+function slider($atts, $content = null) {
     $a = shortcode_atts( array(
         'sources' => ''
     ), $atts);
@@ -456,15 +404,24 @@ function gallery($atts, $content = null) {
         return $output;
     $no_whitespaces = preg_replace( '/\s*,\s*/', ',', filter_var( $a['sources'], FILTER_SANITIZE_STRING ) ); 
     $sources_array = explode( ',', $no_whitespaces );
+    $output .= '<div class="section slider">';
+        $output .= '<div class="content-block">';
+            $output .= '<div class="slider-box">';
+                foreach ($sources_array as $i => $v) {
+                    $output .= '<div class="image"><img title="Img ' . $i . '" src="' . $v . '"" /></div>';
+                }
+            $output .= '</div>';
+        $output .= '</div>';
+    $output .= '</div>';
     $output .= '<div class="section gallery">';
-        foreach ($sources_array as $i => $v) {
-            $output .= '<div>' . $v . '</div>';
-        }
+        $output .= '<div class="content-block">';
+            $output .= '<div class="gallery-box">';
+                foreach ($sources_array as $i => $v) {
+                    $output .= '<div class="image"><img title="Img ' . $i . '" src="' . $v . '"" /></div>';
+                }
+            $output .= '</div>';
+        $output .= '</div>';
     $output .= '</div>';
     return $output;
-    ?>
-    
-    <?php
-    // return ob_get_clean();
 }
 ?>

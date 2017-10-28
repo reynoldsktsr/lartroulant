@@ -11,11 +11,9 @@
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/justifiedGallery.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick-theme.css">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.justifiedGallery.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
 	</head>
 	<body <?php body_class(); ?>>
