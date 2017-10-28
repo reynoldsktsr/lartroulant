@@ -397,10 +397,11 @@ function custom_content_block($atts, $content = null) {
 }
 function slider($atts, $content = null) {
     $a = shortcode_atts( array(
-        'sliderID' => 'slider-box',
-        'galleryID' => 'gallery-box',
+        'slider_id' => '',
+        'gallery_id' => '',
         'sources' => ''
     ), $atts);
+
     $output = '';
     if (!$a['sources'])
         return $output;
@@ -408,7 +409,7 @@ function slider($atts, $content = null) {
     $sources_array = explode( ',', $no_whitespaces );
     $output .= '<div class="section slider">';
         $output .= '<div class="content-block">';
-            $output .= '<div class="slider-block ' . $a['sliderID'] . '">';
+            $output .= '<div class="slider-block ' . $a['slider_id'] . '">';
                 foreach ($sources_array as $i => $v) {
                     $output .= '<div class="image"><img title="Img ' . $i . '" src="' . $v . '"" /></div>';
                 }
@@ -417,7 +418,7 @@ function slider($atts, $content = null) {
     $output .= '</div>';
     $output .= '<div class="section gallery">';
         $output .= '<div class="content-block">';
-            $output .= '<div class="gallery-block ' . $a['galleryID'] . '">';
+            $output .= '<div class="gallery-block ' . $a['gallery_id'] . '">';
                 foreach ($sources_array as $i => $v) {
                     $output .= '<div class="image"><img title="Img ' . $i . '" src="' . $v . '"" /></div>';
                 }

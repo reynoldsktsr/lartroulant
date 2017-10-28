@@ -16,6 +16,11 @@ body {
 p, h1, h2, h3, div {
 	font-weight: 100;
 }
+.posting:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 
 /* Sections */
 .section {
@@ -115,10 +120,10 @@ footer {
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none;  
 }
-.slider-box .slick-track {
+.slider-block .slick-track {
 	height: 500px;
 }
-.slider-box img {
+.slider-block img {
 	height: 100%;
 	margin: 0 auto;
 }
