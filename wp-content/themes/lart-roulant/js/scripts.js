@@ -1,14 +1,23 @@
-// $('#gallery').justifiedGallery({rowHeight: 70});
-
-$('.slider-box').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
+var $allSliders = $('.slider-block').map(function(i) {
+	return $(this).attr('class').split(' ')[1];
 });
-$('.gallery-box').slick({
-	slidesPerRow: 5,
-	rows: 2,
-	arrows: false,
-	dots: true,
+var $allGalleries = $('.gallery-block').map(function(i) {
+	return $(this).attr('class').split(' ')[1];
+});
+
+$allSliders.each(function(i,id) {
+	$('.' + id).slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+});
+$allGalleries.each(function(i, id) {
+	$('.' + id).slick({
+		slidesPerRow: 5,
+		rows: 2,
+		arrows: false,
+		dots: true,
+	});
 });
 
 var $slider = $('.slider-box');
