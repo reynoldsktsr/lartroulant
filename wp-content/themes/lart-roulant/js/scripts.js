@@ -34,6 +34,7 @@ $allGalleries.each(function(i, id) {
 	var $gallery = $('.' + id);
 	var $galleryFiltered = $gallery.find('.slick-slide:not(.slick-cloned)');
 	var $galleryImages = $galleryFiltered.find('div.image');
+	var killit = false;
 	$galleryImages.each(function(j) {
 	    $(this).attr('data-index', j);
 	    $(this).addClass('gallery-image-' + j);
@@ -51,7 +52,8 @@ $allGalleries.each(function(i, id) {
 			var idx = $(this).data('index');
 			gallerySliderPair['pair-' + i].slider.slider.slick('goTo', idx);
 		}
-	});$gallery
+	});
+	$gallery
     .on("beforeChange", function() {
         killit = true;
     }).on("afterChange", function() {
