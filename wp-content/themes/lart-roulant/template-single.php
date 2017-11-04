@@ -1,10 +1,15 @@
-<?php /* Template Name: Single Page Template */ get_header(); ?>
+<?php 
+/* Template Name: Single Page Template */ 
+get_header(); 
+?>
 
 	<main role="main">
 		<section>
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php the_content(); ?>
+					<div id="fullpage">
+						<?php the_content(); ?>
+					</div>
 				</article>
 			<?php endwhile; ?>
 			<?php else: ?>

@@ -341,6 +341,9 @@ add_shortcode('section-content', 'section_content');
 add_shortcode('section-meta', 'section_meta');
 add_shortcode('content-block', 'custom_content_block');
 add_shortcode('custom-slider', 'slider');
+add_shortcode('new-post', 'new_post');
+add_shortcode('left-group', 'new_group_left');
+add_shortcode('right-group', 'new_group_right');
 
 /*------------------------------------*\
 	Custom Post Types
@@ -379,7 +382,8 @@ function section_meta($atts, $content = null) {
 function custom_content_block($atts, $content = null) {
     $a = shortcode_atts( array( 
         'title' => '',
-        'show' => false
+        'show' => false,
+        'color' => '000000'
     ), $atts );
     // return '<div class="content-block">' . $content . '</div>';
     ob_start();
@@ -387,7 +391,7 @@ function custom_content_block($atts, $content = null) {
     <div class="content-block">
         <div class="content-block-title">
             <h1><?php echo $a['title'] ?></h1>
-            <div class="content-block-accent"></div>
+            <div class="content-block-accent" style="background:#<?php echo $a['color']; ?>"></div>
         </div>
         <div class="content-block-content"><?php echo $content; ?></div>
         <div style="clear:both;"></div>
@@ -426,5 +430,14 @@ function slider($atts, $content = null) {
         $output .= '</div>';
     $output .= '</div>';
     return $output;
+}
+function new_post($atts, $content = null) {
+    return '<div class="posting">' . do_shortcode($content) . '</div';
+}
+function new_group_left($atts, $content = null) {
+    return '<div class="left-sections">' . do_shortcode($content) . '</div>';
+}
+function new_group_right($atts, $content = null) {
+    return '<div class="right-sections">' . do_shortcode($content) . '</div>';
 }
 ?>
