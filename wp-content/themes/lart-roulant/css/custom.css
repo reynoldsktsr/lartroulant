@@ -17,7 +17,7 @@ p, h1, h2, h3, div {
 	font-weight: 100;
 }
 .wrapper {
-	margin: 0px 80px 0px 150px;
+	margin: 40px 80px 0px 150px;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
@@ -49,7 +49,7 @@ p, h1, h2, h3, div {
 .section.content {
 	float: right;
 	width: 45%;
-	height: 100%;
+	height: calc(100% - 40px);
 	overflow: scroll;
 	padding: 5px;
 }
@@ -133,7 +133,7 @@ footer {
 	user-select: none;  
 }
 .slider-block .slick-track {
-	height: 500px;
+	height: 25vw;
 }
 .slider-block img {
 	height: 100%;
@@ -141,9 +141,13 @@ footer {
 }
 
 .gallery div.image {
-	height: 100px;
+	height: 6vw;
 	overflow: hidden;
 	padding: 2px;
+}
+.gallery div.image img {
+	height: 100%;
+	width: fit-content;
 }
 
 div:focus {
@@ -153,4 +157,102 @@ div:focus {
 /*Fullpage Customization*/
 #fp-nav ul li .fp-tooltip {
 	color: #000000;
+}
+
+
+@media only screen and (max-width: 1600px) {
+	.content-block-title h1 {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	.content-block-title h1 {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 1080px) {
+	.wrapper {
+		margin-top: 0;
+		margin-right: 0;
+		margin: 0 0 0 100px;
+	}
+	.fp-tableCell {
+		overflow: scroll;
+		vertical-align: inherit;
+		background: white;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	.fp-tableCell:after {
+		content: '';
+		clear: both;
+	}
+	#fp-nav.left {
+		left: 0;
+	}
+	#fp-nav ul li .fp-tooltip {
+		font-size: 11px;
+	}
+	#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+		width: 70px;
+		white-space: normal;
+	}
+	.left-sections {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	.section {
+		padding: 10px;
+	}
+	.section.meta .page-title {
+		font-size: 0.8em;
+		width: 100%;
+	}
+	.section.meta .quick-info {
+		display: none;
+	}
+	.section.slider, .section.gallery {
+		padding: 0;
+	}
+	.section.content {
+		float: none;
+		width: 100%;
+		/*overflow: initial;*/
+	}
+	.content-block {
+		box-shadow: none;
+		min-height: 90px;
+	}
+	.content-block-title {
+		float: none;
+		display: block;
+		top: 0;
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	.content-block-accent {
+		position: initial;
+	}
+	.content-block-content {
+		float: none;
+		display: block;
+		width: 100%;
+		font-size: 1.1em;
+		text-align: justify;
+	}
+
+	
+	.slider-block .slick-track {
+		height: 55vw;
+	}
+	.slider-block img {
+		height: auto;
+	}
+	.gallery div.image {
+		height: 15vw;
+	}
+	.gallery div.image img {
+		height: 100%;
+		width: fit-content;
+	}
 }

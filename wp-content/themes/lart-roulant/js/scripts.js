@@ -11,6 +11,20 @@ function initSliders() {
 			rows: 2,
 			arrows: false,
 			dots: true,
+			responsive: [{
+				breakpoint: 1300,
+				settings: {
+					slidesPerRow: 4,
+					rows: 3
+				}
+			},
+			{
+				breakpoint: 1080,
+				settings: {
+					slidesPerRow: 3,
+					rows: 3
+				}
+			}]
 		};
 	var gallerySliderPair = {};
 	$allSliders.each(function(i,id) {
@@ -68,8 +82,8 @@ function initFullPage() {
 		navigation: true,
 		navigationPosition: 'left',
 		showActiveTooltip: true,
-		paddingTop: '20px',
-		paddingBottom: '80px'
+		// paddingTop: '20px',
+		// paddingBottom: '80px'
 		// navigationTooltips: ['car1', 'car2']
 	});
 	$.fn.fullpage.setAllowScrolling(false);
