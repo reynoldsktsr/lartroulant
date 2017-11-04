@@ -1,6 +1,6 @@
 <?php 
 /* Template Name: Single Page Template */ 
-get_header(); 
+get_header('single'); 
 ?>
 
 	<main role="main">
@@ -19,4 +19,4 @@ get_header();
 			<?php endif; ?>
 		</section>
 	</main>
-<?php get_footer(); ?>
+<?php get_footer('single'); ?>
