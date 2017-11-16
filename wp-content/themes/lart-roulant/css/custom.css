@@ -150,9 +150,8 @@ footer {
 	height: 100%;
 	width: fit-content;
 }
-
+.left-sections .alignnone { width: 100%; padding: 0 20px; }
 .gallery { padding: 10px; }
-.gallery .gallery-item { float: none; padding: 10px; display: inline-block; }
 .gallery .gallery-item img { border: none !important; height: auto; }
 
 div:focus {
