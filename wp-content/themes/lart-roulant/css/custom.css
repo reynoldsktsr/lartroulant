@@ -151,6 +151,10 @@ footer {
 	width: fit-content;
 }
 
+.gallery { padding: 10px; }
+.gallery .gallery-item { float: none; padding: 10px; display: inline-block; }
+.gallery .gallery-item img { border: none; height: auto; }
+
 div:focus {
 	outline: none;
 }
