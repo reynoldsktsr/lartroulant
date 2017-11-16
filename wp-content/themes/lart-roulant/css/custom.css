@@ -40,7 +40,6 @@ footer {
 .left-sections {
 	float: left;
 	width: 55%;
-	padding-right: 15px;
 }
 .left-sections > p {
 	display: none;
@@ -52,9 +51,6 @@ footer {
 .section.content {
 	float: right;
 	width: 45%;
-	height: 100%;
-	overflow-y: scroll;
-	overflow-x: hidden;
 	padding: 5px;
 }
 .section.meta .page-title {
@@ -163,7 +159,9 @@ div:focus {
 	background: white;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	display: block;
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 20px;
 }
 #fp-nav.left {
 	left: 0;
