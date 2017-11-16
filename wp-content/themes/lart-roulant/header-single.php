@@ -17,6 +17,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.2.1.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.fullpage.js"></script>
+		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 		<!-- wrapper -->
