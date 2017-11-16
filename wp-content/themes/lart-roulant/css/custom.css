@@ -153,7 +153,7 @@ footer {
 
 .gallery { padding: 10px; }
 .gallery .gallery-item { float: none; padding: 10px; display: inline-block; }
-.gallery .gallery-item img { border: none; height: auto; }
+.gallery .gallery-item img { border: none !important; height: auto; }
 
 div:focus {
 	outline: none;
@@ -163,6 +163,8 @@ div:focus {
 .fp-tableCell {
 	background: white;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	display: block;
+	overflow: scroll;
 }
 #fp-nav.left {
 	left: 0;
