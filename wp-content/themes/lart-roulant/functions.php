@@ -15,7 +15,7 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-    
+
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
 	'default-color' => 'FFF',
@@ -369,7 +369,7 @@ function section_meta($atts, $content = null) {
             <h1><?php echo $a['header']?></h1>
             <h2><?php echo $a['subheader']?></h2>
         </div>
-        <?php if($a['quick_info'] == true) : ?>
+        <?php if($a['quick_info'] == "true") : ?>
             <div class="content-block quick-info">
                 <div class="content-block-content"><?php echo $content; ?></div>
             </div>
