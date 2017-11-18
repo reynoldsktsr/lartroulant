@@ -328,16 +328,23 @@ div:focus {
 		height: 100%;
 		width: fit-content;
 	}
+	.gallery .gallery-item {
+		
+		float: none !important;
+		display: inline-block;
+	}
 }
 @media only screen and (max-width: 768px) {
 	.gallery .gallery-item {
-		float: none !important;
-		display: inline-block;
 		width: calc(100% / 3) !important;
 	}
 }
 @media only screen and (max-width: 619px) {
 	.gallery .gallery-item {
 		width: 50% !important;
+	}
+	.gallery .gallery-item img {
+		width: 100px !important;
+		height: 100px !important;
 	}
 }
