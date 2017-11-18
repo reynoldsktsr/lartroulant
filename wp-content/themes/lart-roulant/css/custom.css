@@ -230,15 +230,18 @@ div:focus {
 		width: calc(100% / 3) !important;
 	}
 }
-@media only screen and (max-width: 1300px) {
-	.content-block-title h1 {
-		font-size: 16px;
-	}
+@media only screen and (max-width: 1450px) {
+	
 	.section.meta .page-title {
 		width: 100%;
 	}
 	.section.meta .quick-info {
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	.content-block-title h1 {
+		font-size: 16px;
 	}
 }
 @media only screen and (max-width: 1200px) {
