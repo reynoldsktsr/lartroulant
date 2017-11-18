@@ -322,6 +322,7 @@ div:focus {
 		transform: none;
 		width: 100%;
 		padding-bottom: 20px;
+		text-align: left;
 	}
 	.content-block-accent {
 		position: initial;
