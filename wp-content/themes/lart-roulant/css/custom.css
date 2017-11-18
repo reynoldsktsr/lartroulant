@@ -127,9 +127,17 @@ footer {
 	width: 50%;
 	height: 140px;
 	float: right;
+	border-right: 1px solid;
+	display: table;
+
 }
 .quick-info .content-block-content {
 	font-weight: bold;
+	margin: 0;
+	font-family: cursive;
+	font-size: 20px;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 
@@ -280,7 +288,7 @@ div:focus {
 		padding: 0;
 	}
 	.section.content {
-		float: none;
+		/*float: none;*/
 		width: 100%;
 		/*overflow: initial;*/
 	}
@@ -319,5 +327,12 @@ div:focus {
 	.gallery div.image img {
 		height: 100%;
 		width: fit-content;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.gallery .gallery-item {
+		float: none;
+		display: inline-block;
+		width: calc(100% / 3);
 	}
 }
