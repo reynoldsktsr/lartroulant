@@ -235,6 +235,13 @@ div:focus {
 		font-size: 16px;
 	}
 }
+@media only screen and (max-width: 1200px) {
+	.gallery .gallery-item {
+		float: none !important;
+		display: inline-block;
+	}
+	
+}
 @media only screen and (max-width: 1080px) {
 	footer {
 		transform: rotate(90deg);
@@ -330,10 +337,6 @@ div:focus {
 	.gallery div.image img {
 		height: 100%;
 		width: fit-content;
-	}
-	.gallery .gallery-item {
-		float: none !important;
-		display: inline-block;
 	}
 }
 @media only screen and (max-width: 768px) {
