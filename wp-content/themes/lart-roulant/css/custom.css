@@ -231,12 +231,15 @@ div:focus {
 	}
 }
 @media only screen and (max-width: 1450px) {
-	
+
 	.section.meta .page-title {
 		width: 100%;
 	}
 	.section.meta .quick-info {
 		width: 100%;
+	}
+	.content-block-title {
+		width: 50%;
 	}
 }
 @media only screen and (max-width: 1300px) {
