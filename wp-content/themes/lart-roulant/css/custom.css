@@ -226,6 +226,9 @@ div:focus {
 	.content-block-title h1 {
 		font-size: 20px;
 	}
+	.gallery .gallery-item {
+		width: calc(100% / 3) !important;
+	}
 }
 @media only screen and (max-width: 1300px) {
 	.content-block-title h1 {
@@ -331,7 +334,6 @@ div:focus {
 	.gallery .gallery-item {
 		float: none !important;
 		display: inline-block;
-		width: calc(100% / 3) !important;
 	}
 }
 @media only screen and (max-width: 768px) {
