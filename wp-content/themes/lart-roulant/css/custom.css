@@ -329,14 +329,13 @@ div:focus {
 		width: fit-content;
 	}
 	.gallery .gallery-item {
-		
 		float: none !important;
 		display: inline-block;
+		width: calc(100% / 3) !important;
 	}
 }
 @media only screen and (max-width: 768px) {
 	.gallery .gallery-item {
-		width: calc(100% / 3) !important;
 	}
 }
 @media only screen and (max-width: 619px) {
