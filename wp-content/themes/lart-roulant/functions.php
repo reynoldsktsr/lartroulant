@@ -391,7 +391,7 @@ function custom_content_block($atts, $content = null) {
     <div class="content-block">
         <div class="content-block-title">
             <h1><?php echo $a['title'] ?></h1>
-            <div class="content-block-accent" style="background:#<?php echo $a['color']; ?>"></div>
+            <div class="content-block-accent" style="background:#000000;"></div>
         </div>
         <div class="content-block-content"><?php echo $content; ?></div>
         <div style="clear:both;"></div>
