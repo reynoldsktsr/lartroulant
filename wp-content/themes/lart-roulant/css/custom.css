@@ -246,6 +246,13 @@ div:focus {
 	.content-block-title {
 		width: 50%;
 	}
+	.section.meta .page-title h1 {
+		font-size: 8em;
+		line-height: 1;
+	}
+	.section.meta .page-title h2 {
+		line-height: 1;
+	}
 }
 @media only screen and (max-width: 1300px) {
 	.content-block-title h1 {
@@ -307,13 +314,6 @@ div:focus {
 		font-size: 0.8em;
 		width: 100%;
 		height: 100px;
-	}
-	.section.meta .page-title h1 {
-		font-size: 8em;
-		line-height: 1;
-	}
-	.section.meta .page-title h2 {
-		line-height: 1;
 	}
 	.section.meta .quick-info {
 		/*display: none;*/
