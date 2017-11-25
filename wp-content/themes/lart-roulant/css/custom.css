@@ -239,6 +239,8 @@ div:focus {
 	}
 	.section.meta .quick-info {
 		width: 100%;
+		border: none;
+		height: auto;
 	}
 	.content-block-title {
 		width: 50%;
@@ -303,9 +305,17 @@ div:focus {
 	.section.meta .page-title {
 		font-size: 0.8em;
 		width: 100%;
+		height: 100px;
+	}
+	.section.meta .page-title h1 {
+		font-size: 8em;
+		line-height: 1;
+	}
+	.section.meta .page-title h2 {
+		line-height: 1;
 	}
 	.section.meta .quick-info {
-		display: none;
+		/*display: none;*/
 	}
 	.section.slider, .section.gallery {
 		padding: 0;
