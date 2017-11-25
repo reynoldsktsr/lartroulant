@@ -49,7 +49,7 @@ footer {
 	width: 55%;
 }
 .left-sections > p {
-	display: none;
+	/*display: none;*/
 }
 .right-sections {
 	float: right;
