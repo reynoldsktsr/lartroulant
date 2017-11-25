@@ -13,12 +13,12 @@ br {
 	display: none;
 }
 body {
-	background-image: url(../img/bg2.jpg);
+	background-image: url(../img/background1.jpg);
 	background-size: contain;
 	background-attachment: fixed;
 	/*background-repeat: no-repeat;*/
 	background-blend-mode: soft-light;
-	background-color: rgba(237, 232, 209, 0.8);
+	background-color: rgba(237, 232, 209, 0.7);
 }
 p, h1, h2, h3, div {
 	font-weight: 100;
