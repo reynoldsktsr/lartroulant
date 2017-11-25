@@ -13,10 +13,12 @@ br {
 	display: none;
 }
 body {
-	background-image: url(../img/bg.jpg);
-	background-size: cover;
+	background-image: url(../img/bg2.jpg);
+	background-size: contain;
 	background-attachment: fixed;
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
+	background-blend-mode: soft-light;
+	background-color: rgba(237, 232, 209,0.7);
 }
 p, h1, h2, h3, div {
 	font-weight: 100;
@@ -83,7 +85,7 @@ footer {
 	/*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
 	padding: 10px;
 	max-width: 100%;
-	background: #ede8d1;
+	/*background: #ede8d1;*/
 	min-height: 120px;
 	position: relative;
 }
