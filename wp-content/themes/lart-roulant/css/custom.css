@@ -83,7 +83,7 @@ footer {
 	/*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
 	padding: 10px;
 	max-width: 100%;
-	background: #ffffff;
+	background: #ede8d1;
 	min-height: 120px;
 	position: relative;
 }
@@ -165,7 +165,7 @@ footer {
 	height: 100%;
 	width: fit-content;
 }
-.left-sections .alignnone { width: 100%; padding: 0 20px; }
+.left-sections .alignnone { width: 100%; padding: 0 5%; }
 .gallery { padding: 10px; }
 .gallery .gallery-item img { border: none !important; height: auto; }
 
@@ -175,7 +175,7 @@ div:focus {
 
 /*Fullpage Customization*/
 .fp-tableCell {
-	background: white;
+	background: #ede8d1;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	display: block;
 	overflow-x: hidden;
