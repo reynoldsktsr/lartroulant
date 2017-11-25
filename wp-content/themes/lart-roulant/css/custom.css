@@ -348,7 +348,10 @@ div:focus {
 		text-align: justify;
 		margin-left: 0;
 	}
-
+	.quick-info .content-block-content {
+		font-size: 1.5em;
+		padding: 10px;
+	}
 	
 	.slider-block .slick-track {
 		height: 55vw;
