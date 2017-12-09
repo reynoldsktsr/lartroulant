@@ -2,6 +2,8 @@
 /wp-admin
 /wp-includes
 .htaccess
+wp-cli.phar
+wp-cli.pharcurl
 
 /index.php
 /license.txt
@@ -25,3 +27,4 @@
 /wp-content/themes/index.php
 /wp-content/plugins/hello.php
 /wp-content/plugins/index.php
+/wp-content/plugins/akismet/class.akismet-rest-api.php
